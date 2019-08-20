@@ -27,7 +27,7 @@ SECRET_KEY = '0)co@q+3^t)%$+k+es!4u7$iixgd-ljorw&e07+%691y)wuk(o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [0s.environ.get(C9_HOSTNAME'),
+ALLOWED_HOSTS = [os.environ.get('C9_HOSTNAME'),
                  os.environ.get('HOSTNAME')]
 
 
@@ -77,9 +77,8 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-# 
 
-DATABASES = {'default': dj_database_url.parse("os.environ.get('DATABASE.URL'))}
+DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 
 # Password validation
